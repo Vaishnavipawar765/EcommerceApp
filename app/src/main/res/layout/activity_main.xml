@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Content ScrollView -->
+    <ScrollView
+        android:id="@+id/mainContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation"
+        android:padding="24dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/admin_image"
+                android:contentDescription="Admin Image"
+                android:layout_marginBottom="16dp"
+                android:scaleType="centerCrop" />
+
+            <Button
+                android:id="@+id/adminBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Admin Portal"
+                android:backgroundTint="#F44336"
+                android:layout_marginBottom="50dp"
+                android:padding="12dp" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/customer_icon"
+                android:contentDescription="customer Image"
+                android:layout_marginBottom="16dp"
+                android:scaleType="centerCrop" />
+
+            <Button
+                android:id="@+id/customerBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Customer Portal"
+                android:backgroundTint="#2196F3"
+                android:padding="12dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation View -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        app:itemIconTint="@color/selector_nav_color"
+        app:itemTextColor="@color/selector_nav_color"
+        app:menu="@menu/bottom_nav_menu" />
+</RelativeLayout>
